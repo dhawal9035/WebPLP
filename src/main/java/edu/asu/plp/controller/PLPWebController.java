@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.asu.plp;
+package edu.asu.plp.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +11,8 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import edu.asu.plp.model.AssemblyInfo;
+import edu.asu.plp.service.PLPUserDB;
 import edu.asu.plp.tool.backend.EventRegistry;
 import edu.asu.plp.tool.backend.isa.*;
 import edu.asu.plp.tool.backend.isa.events.DeviceOutputEvent;

@@ -1,4 +1,4 @@
-package edu.asu.plp;
+package edu.asu.plp.model;
 
 public class AssemblyInfo {
 	private String[] code; 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package edu.asu.plp;
+package edu.asu.plp.service;
 
 import javax.servlet.http.HttpSession;
 
