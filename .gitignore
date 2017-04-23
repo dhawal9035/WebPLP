@@ -1,0 +1,7 @@
+/target/
+.classpath
+.project
+.mvn
+*.class
+*.log
+DisassemblyOfFile.txt
