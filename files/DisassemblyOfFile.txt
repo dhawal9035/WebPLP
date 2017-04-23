@@ -1,0 +1,24 @@
+
+
+
+
+Symbol Table
+
+key                                      | value                                   
+
+
+
+Program encoding
+
+Address[Hex] | Address[Dec] | InstructionEncoding[Hex] | InstructionEncoding[Dec] | Actual Instruction                       | Sub Instruction                          | Line Number | Source File                             
+
+0x10000000   |    268435456 | 0x3c080000               |               1007157248 | li $t0, 10                               | lui $t0, $_hi:10                         |           2 | main.asm                                
+0x10000004   |    268435460 | 0x3508000a               |                889716746 | li $t0, 10                               | ori $t0, $t0, $_lo:10                    |           2 | main.asm                                
+0x10000008   |    268435464 | 0x3c090000               |               1007222784 | li $t1, 15                               | lui $t1, $_hi:15                         |           3 | main.asm                                
+0x1000000c   |    268435468 | 0x3529000f               |                891879439 | li $t1, 15                               | ori $t1, $t1, $_lo:15                    |           3 | main.asm                                
+0x10000010   |    268435472 | 0x1094021                |                 17383457 | addu $t0, $t0, $t1                       | addu $t0, $t0, $t1                       |           4 | main.asm                                
+0x10000014   |    268435476 | 0x0                      |                        0 | nop                                      | sll $0, $0, 0                            |           5 | main.asm                                
+
+
+
+
