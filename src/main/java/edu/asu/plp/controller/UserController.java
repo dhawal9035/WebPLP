@@ -3,11 +3,12 @@ package edu.asu.plp.controller;
 import java.security.Principal;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import edu.asu.plp.model.UserModel;
 import edu.asu.plp.service.UserService;
 
 @RestController
@@ -22,9 +23,8 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/saveUser", method=RequestMethod.POST)
-	public void saveUser(@RequestParam (value="firstName") String firstName, @RequestParam (value="lastName") String lastName,
-			 @RequestParam (value="email") String emailId){
+	public void saveUser(@RequestBody UserModel user){
 		
-		userService.saveUser(emailId, firstName, lastName);
+		userService.saveUser(user.email, user.firstName, user.lastName);
 	}
 }

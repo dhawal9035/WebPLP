@@ -10,7 +10,15 @@ app.controller('idectrl', [ '$scope', '$cookies', '$http', function( $scope, $co
 		$http.get('/user').success(function(user) {
 			$scope.user = user;
 			console.log('Logged User : ', user);
-			//$window.location.href = '/homepage.html';
+			var indata = {	firstName: user.userAuthentication.details.given_name,
+					  	  	lastName: user.userAuthentication.details.family_name,
+					  	  	email: user.userAuthentication.details.email }
+			$http({
+	            method: 'POST',
+	            url: 'http://localhost:8080/saveUser',
+	            headers: {'Content-Type': 'application/json'},
+	            data: indata,
+	        });
 		}).error(function(error) {
 			$scope.resource = error;
 		});
